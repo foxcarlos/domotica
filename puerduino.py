@@ -3,7 +3,7 @@ import time
 
 def main():
     while 1:
-        s = serial.Serial("/dev/ttyACM1")
+        s = serial.Serial("/dev/ttyACM0")
         recv = s.readline()
         print recv.split()
         time.sleep(2)
