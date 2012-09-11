@@ -11,10 +11,10 @@ s = serial.Serial("/dev/ttyACM0")
 while not salir:
     encontrados = bluetooth.discover_devices(duration=4, flush_cache=True, lookup_names=False)
     if mi_telefono in encontrados:
-        print '0 Desbloquear'
+        print '0 Apagar Led'
         #os.system('gnome-screensaver-command -d')
         s.write('0')
     else:
-        print '1 Bloquear'
+        print '1 Encender Led'
         #os.system('gnome-screensaver-command -l')
         s.write('1')
