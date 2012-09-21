@@ -6,7 +6,7 @@ import serial
 
 salir = False
 mi_telefono = 'AC:E8:7B:6E:51:9C'
-s = serial.Serial("/dev/ttyACM2")
+s = serial.Serial("/dev/ttyACM1")
 
 while not salir:
     encontrados = bluetooth.discover_devices(duration=3, flush_cache=True, lookup_names=False)
