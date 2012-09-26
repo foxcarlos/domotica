@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+Dispositivo Arduino conectado a un circuito Electronico que
+permite abrir una cerradura electrica o hembrilla Electrica
+
+Script de practicas que permite ejecutar un server socket
+que esta a la espera de un envio via socket (via android para mi caso)
+de la contraseña, si la contraseña esta en la lista claves[]
+este enviara via puerto serial un pulso al dispositivo Arduino 
+con el cual se abrira la cerradura Electrica o hembrilla Electrica
+'''
+
 import socket
 import time
 import serial
@@ -18,7 +32,6 @@ while 1:
     seguir = True
     while seguir:
         peticion = socket_cliente.recv(1024)
-        print(peticion)
         if peticion in claves:
             s.write('1')
         else:

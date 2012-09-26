@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+'''
+Script para un telefono Android corriendo mediante SL4A
+que permite enviar via socket una contraseña que de ser
+la correcta le indica al server socket que debe abrir
+la cerradura Electrica o hembrilla Electrica
+'''
+
 import socket
 import android
 
