@@ -3,7 +3,7 @@ import time
 from pygame import mixer
 
 mixer.init()
-mixer.music.load('campana3.mp3')
+mixer.music.load('/home/pi/desarrollo/python/domotica/campana3.mp3')
 
 def main():
     while 1:
