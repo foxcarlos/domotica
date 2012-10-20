@@ -21,7 +21,7 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(("", 8000))
 server.listen(1)
 
-#s = serial.Serial("/dev/ttyACM0")
+s = serial.Serial("/dev/ttyACM1")
 
 claves = ['11951', 'carlos']
 
@@ -34,13 +34,14 @@ while 1:
         peticion = socket_cliente.recv(1024)
         if peticion in claves:
             print peticion
-            #s.write('1')
+            s.write('1')
         else:
             print peticion
-            #s.write('0')
+            s.write('0')
         
         time.sleep(3)
         socket_cliente.close()
         break
 
 server.close()
+s.close()
